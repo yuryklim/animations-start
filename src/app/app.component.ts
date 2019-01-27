@@ -12,7 +12,7 @@ import {state, style, trigger} from '@angular/animations';
       })),
       state('highlighted', style({
         'background-color': 'blue',
-        transform: 'translateX(100)'
+        transform: 'translateX(100px)'
       }))
     ])
   ]
@@ -27,5 +27,13 @@ export class AppComponent {
 
   onDelete(item) {
     this.list.splice(this.list.indexOf(item), 1);
+  }
+
+  onShrink() {
+
+  }
+
+  onAnimate() {
+    this.state === 'normal' ? this.state = 'highlighted' : this.state = 'normal';
   }
 }
