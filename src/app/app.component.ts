@@ -124,4 +124,12 @@ export class AppComponent {
     this.state === 'normal' ? this.state = 'highlighted' : this.state = 'normal';
     this.wildState === 'normal' ? this.wildState = 'highlighted' : this.wildState = 'normal';
   }
+
+  animationEnded(event) {
+    console.log(event);
+  }
+
+  animationStarted(event) {
+    console.log(event);
+  }
 }
